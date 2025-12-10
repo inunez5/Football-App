@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Game Predictor</h2>
+
+<form method="post">
+    <fieldset>
+        <legend>Team A</legend>
+        <input type="text" name="team_a" placeholder="Team A Name" required>
+        <input type="number" step="0.1" name="avg_a" placeholder="Avg Points" required>
+    </fieldset>
+
+    <fieldset>
+        <legend>Team B</legend>
+        <input type="text" name="team_b" placeholder="Team B Name" required>
+        <input type="number" step="0.1" name="avg_b" placeholder="Avg Points" required>
+    </fieldset>
+
+    <button type="submit">Predict Winner</button>
+</form>
+
+{% if result %}
+<hr>
+<h3>{{ result }}</h3>
+{% endif %}
+
+{% endblock %}

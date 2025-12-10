@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Score Calculator</h2>
+
+<form method="post">
+    <label>Touchdowns:
+        <input type="number" name="touchdowns" value="0" min="0">
+    </label>
+
+    <label>Field Goals:
+        <input type="number" name="field_goals" value="0" min="0">
+    </label>
+
+    <label>Safeties:
+        <input type="number" name="safeties" value="0" min="0">
+    </label>
+
+    <label>Extra Points:
+        <input type="number" name="extra_points" value="0" min="0">
+    </label>
+
+    <button type="submit">Calculate Score</button>
+</form>
+
+{% if total is not none %}
+<h3>Total Score: {{ total }} points</h3>
+{% endif %}
+
+{% endblock %}
