@@ -1,0 +1,1 @@
+This Flask app allows users to calculate an NFL team's total score based on touchdowns, field goals, safeties, and extra points. It also includes a simple game predictor where users can compare two teams' average points per game and get a basic prediction of which team might have the edge.
